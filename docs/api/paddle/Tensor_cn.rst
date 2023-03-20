@@ -51,7 +51,7 @@ dtype
 grad
 :::::::::
 
-查看一个 Tensor 的梯度，数据类型为 numpy\.ndarray。
+查看一个 Tensor 的梯度，数据类型为 paddle\.Tensor。
 
 **代码示例**
 
@@ -1926,7 +1926,7 @@ scale(scale=1.0, bias=0.0, bias_after_scale=True, act=None, name=None)
 scale_(scale=1.0, bias=0.0, bias_after_scale=True, act=None, name=None)
 :::::::::
 
-Inplace 版本的 :ref:`cn_api_paddle_tensor_unsqueeze` API，对输入 `x` 采用 Inplace 策略。
+Inplace 版本的 :ref:`cn_api_fluid_layers_scale` API，对输入 `x` 采用 Inplace 策略。
 
 scatter(index, updates, overwrite=True, name=None)
 :::::::::
@@ -2476,7 +2476,7 @@ frexp(x)
 
 返回类型：Tensor, Tensor
 
-请参考 :ref:`_cn_api_paddle_frexp`
+请参考 :ref:`cn_api_paddle_frexp`
 
 data_ptr()
 :::::::::
@@ -2484,3 +2484,12 @@ data_ptr()
 返回：Tensor 的数据的存储地址
 
 返回类型：int
+
+polar(abs, angle)
+:::::::::
+用于将输入的模和相位角计算得到复平面上的坐标
+返回：一个复数 Tensor
+
+返回类型：Tensor
+
+请参考 :ref:`cn_api_paddle_polar`
